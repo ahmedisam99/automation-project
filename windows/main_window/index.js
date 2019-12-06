@@ -5,8 +5,8 @@ const menuBar = require('../../utils/menu_bar');
 
 const createMainWindow = () => {
   const window = new BrowserWindow({
-    minWidth: 500,
-    minHeight: 500,
+    minWidth: 720,
+    minHeight: 550,
     webPreferences: { nodeIntegration: true },
   });
   window.loadURL(
