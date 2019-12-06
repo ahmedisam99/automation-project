@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      href="https://unpkg.com/tabulator-tables@4.5.1/dist/css/tabulator.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="assets/tabulator.css" />
+    <link rel="stylesheet" href="assets/lato.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Deterministic Finite Automata (DFA)</title>
   </head>
@@ -24,13 +18,13 @@
       </div>
       <form class="form">
         <label>Initial State</label>
-        <input type="text" id="initialState" />
+        <input type="text" id="initialState" class="input" />
 
         <label>Final States</label>
-        <input type="text" id="finalState" />
+        <input type="text" id="finalState" class="input" />
 
         <label>Input</label>
-        <input type="text" id="finalState" />
+        <input type="text" id="finalState" class="input" />
 
         <button type="submit" id="formSubmit" class="form-submit btn">
           Accepted?
@@ -38,7 +32,11 @@
       </form>
       <div class="output">
         <div class="output-title">Output</div>
-        <textarea class="output-textarea" disabled></textarea>
+        <textarea
+          class="output-textarea"
+          disabled
+          placeholder="The output will be printed here"
+        ></textarea>
       </div>
     </div>
   </body>

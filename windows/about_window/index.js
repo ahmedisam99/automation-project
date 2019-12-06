@@ -6,6 +6,7 @@ const createAboutWindow = () => {
   let aboutWindow = new BrowserWindow({
     width: 400,
     height: 200,
+    resizable: false,
   });
 
   aboutWindow.loadURL(

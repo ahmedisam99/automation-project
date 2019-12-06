@@ -8,7 +8,6 @@ const table = new Tabulator('#transitionTable', {
   tooltips: true,
   addRowPos: 'bottom',
   history: true,
-  //   autoColumns: true,
   columns: [
     { title: 'State', field: 'state', editor: true },
     {

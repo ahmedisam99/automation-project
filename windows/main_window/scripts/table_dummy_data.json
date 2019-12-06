@@ -38,5 +38,15 @@
     "state": "q3",
     "inputSymbol": "b",
     "nextState": "q0"
+  },
+  {
+    "state": "q4",
+    "inputSymbol": "a",
+    "nextState": "q4"
+  },
+  {
+    "state": "q4",
+    "inputSymbol": "b",
+    "nextState": "q4"
   }
 ]

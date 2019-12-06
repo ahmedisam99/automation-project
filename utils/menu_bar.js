@@ -1,27 +1,25 @@
 const { app, Menu, shell } = require('electron');
 const createAboutWindow = require('../windows/about_window');
 
-const platform = process.platform;
-
 const menuBarTemplate = [
   {
     label: 'File',
     submenu: [
       {
         label: 'New',
-        accelerator: platform == 'darwin' ? 'Command+N' : 'Ctrl+N',
+        accelerator: 'Ctrl+N',
       },
       {
         label: 'Save',
-        accelerator: platform == 'darwin' ? 'Command+S' : 'Ctrl+S',
+        accelerator: 'Ctrl+S',
       },
       {
         label: 'Load',
-        accelerator: platform == 'darwin' ? 'Command+L' : 'Ctrl+L',
+        accelerator: 'Ctrl+L',
       },
       {
         label: 'Quit',
-        accelerator: platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
+        accelerator: 'Ctrl+Q',
         click() {
           app.quit();
         },
@@ -41,7 +39,7 @@ const menuBarTemplate = [
       },
       {
         label: 'About',
-        accelerator: platform == 'darwin' ? 'Command+H' : 'Ctrl+H',
+        accelerator: 'Ctrl+H',
         click: createAboutWindow,
       },
     ],
