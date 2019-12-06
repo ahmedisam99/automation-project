@@ -1,4 +1,4 @@
-const { app, Menu } = require('electron');
+const { app, Menu, shell } = require('electron');
 const createAboutWindow = require('../windows/about_window');
 
 const platform = process.platform;
@@ -33,6 +33,11 @@ const menuBarTemplate = [
     submenu: [
       {
         label: 'Source Code on github',
+        click() {
+          shell.openExternal(
+            'https://github.com/ahmedisam99/automation-project',
+          );
+        },
       },
       {
         label: 'About',

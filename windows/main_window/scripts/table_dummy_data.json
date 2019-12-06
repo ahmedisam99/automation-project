@@ -1,0 +1,42 @@
+[
+  {
+    "state": "q0",
+    "inputSymbol": "a",
+    "nextState": "q1"
+  },
+  {
+    "state": "q0",
+    "inputSymbol": "b",
+    "nextState": "q3"
+  },
+  {
+    "state": "q1",
+    "inputSymbol": "a",
+    "nextState": "q0"
+  },
+  {
+    "state": "q1",
+    "inputSymbol": "b",
+    "nextState": "q2"
+  },
+  {
+    "state": "q2",
+    "inputSymbol": "a",
+    "nextState": "q3"
+  },
+  {
+    "state": "q2",
+    "inputSymbol": "b",
+    "nextState": "q1"
+  },
+  {
+    "state": "q3",
+    "inputSymbol": "a",
+    "nextState": "q2"
+  },
+  {
+    "state": "q3",
+    "inputSymbol": "b",
+    "nextState": "q0"
+  }
+]

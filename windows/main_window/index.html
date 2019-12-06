@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://unpkg.com/tabulator-tables@4.5.1/dist/css/tabulator.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Deterministic Finite Automata (DFA)</title>
   </head>
   <body>
-    <div class="mw-container">
-      <div class="mw-controllers-btns">
-        <button>New</button>
-        <button>Load</button>
-        <button>Save</button>
+    <div class="container">
+      <div class="controllers-btns">
+        <button class="btn">New</button>
+        <button class="btn">Load</button>
+        <button class="btn">Save</button>
       </div>
-      <div class="mw-transition-table">This is the transition function</div>
-      <form class="mw-form">
-        <label for="initialState">
-          Initial State
-          <input type="text" id="initialState" />
-        </label>
-        <label for="finalState">
-          Final States
-          <input type="text" id="finalState" />
-        </label>
-        <label for="finalState">
-          Input
-          <input type="text" id="finalState" />
-        </label>
-        <button type="submit">Accepted?</button>
+      <div class="transition-table-container">
+        <div id="transitionTable" class="transition-table"></div>
+      </div>
+      <form class="form">
+        <label>Initial State</label>
+        <input type="text" id="initialState" />
+
+        <label>Final States</label>
+        <input type="text" id="finalState" />
+
+        <label>Input</label>
+        <input type="text" id="finalState" />
+
+        <button type="submit" id="formSubmit" class="form-submit btn">
+          Accepted?
+        </button>
       </form>
-      <div class="mw-output">
-        <div class="mw-output-title">Output</div>
-        <textarea class="mw-output-textarea"></textarea>
+      <div class="output">
+        <div class="output-title">Output</div>
+        <textarea class="output-textarea" disabled></textarea>
       </div>
     </div>
   </body>
 
-  <script src="script.js"></script>
+  <script src="scripts/form.js"></script>
+  <script src="scripts/table.js"></script>
 </html>

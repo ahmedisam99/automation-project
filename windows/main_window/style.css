@@ -1,3 +1,5 @@
+/* general styles section */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,40 +7,79 @@
   outline: none;
 }
 
-.mw-container {
+body {
+  font-family: 'Lato';
+}
+
+.container {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template: 1fr 5fr 2fr / 2fr 1fr;
+  grid-template: 1fr 5fr 2fr / 1fr 1fr;
 }
 
-.mw-controllers-btns {
+.btn {
+  padding: 0.4rem 1.8rem;
+  background: #333;
+  border: 1px solid #333;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 5px 0 grey;
+  cursor: pointer;
+}
+
+/* controllers buttons section */
+
+.controllers-btns {
   grid-row: 1;
   grid-column: 1;
+  align-self: center;
+  padding-left: 5%;
 }
 
-.mw-transition-table {
+/* transition table section */
+
+.transition-table {
+  max-height: 100%;
+}
+
+.transition-table-container {
   grid-row: 2;
   grid-column: 1;
+  width: 100%;
+  padding-left: 5%;
+  justify-self: left;
 }
 
-.mw-form {
+/* form section */
+
+.form {
   grid-row: 2;
   grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
 }
 
-.mw-output {
+/* output section */
+
+.output {
   grid-row: 3;
   grid-column: 1 / span 2;
   display: grid;
   grid-template: 1fr 9fr/ 1fr;
+  padding: 1%;
 }
-.mw-output-title {
+.output-title {
   grid-row: 1;
   grid-column: 1;
 }
 
-.mw-output-textarea {
+.output-textarea {
   grid-row: 2;
   grid-column: 1;
   resize: none;
