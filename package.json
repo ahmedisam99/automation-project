@@ -1,0 +1,14 @@
+{
+  "name": "automation-project",
+  "version": "1.0.0",
+  "description": "automation project (Dr. Nassir)",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=dev electron ."
+  },
+  "author": "Ahmed I. Abdellatif",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^6.1.5"
+  }
+}

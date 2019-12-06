@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Deterministic Finite Automata (DFA)</title>
+  </head>
+  <body>
+    <div class="mw-container">
+      <div class="mw-controllers-btns">
+        <button>New</button>
+        <button>Load</button>
+        <button>Save</button>
+      </div>
+      <div class="mw-transition-table">This is the transition function</div>
+      <form class="mw-form">
+        <label for="initialState">
+          Initial State
+          <input type="text" id="initialState" />
+        </label>
+        <label for="finalState">
+          Final States
+          <input type="text" id="finalState" />
+        </label>
+        <label for="finalState">
+          Input
+          <input type="text" id="finalState" />
+        </label>
+        <button type="submit">Accepted?</button>
+      </form>
+      <div class="mw-output">
+        <div class="mw-output-title">Output</div>
+        <textarea class="mw-output-textarea"></textarea>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
