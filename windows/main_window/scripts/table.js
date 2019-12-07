@@ -55,6 +55,5 @@ newBtn.addEventListener('click', () => {
 });
 
 saveBtn.addEventListener('click', () => {
-  //   window.XLSX = xlsx;
   table.download('xlsx', 'dfa.xlsx', { sheetName: 'automation-project' });
 });
