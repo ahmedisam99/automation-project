@@ -31,6 +31,7 @@ const menuBarTemplate = [
     submenu: [
       {
         label: 'Source Code on github',
+        accelerator: 'Ctrl+O',
         click() {
           shell.openExternal(
             'https://github.com/ahmedisam99/automation-project',

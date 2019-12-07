@@ -47,6 +47,17 @@ body {
   cursor: pointer;
 }
 
+.no-data-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.no-data-img {
+  width: 17vw;
+  margin-top: 10px;
+}
+
 /* controllers buttons section */
 
 .controllers-btns {

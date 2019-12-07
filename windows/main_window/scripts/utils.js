@@ -1,12 +1,18 @@
 exports.formatDataForTable = data => {
-  return data.map(row => ({ ...row, action: 'Delete' }));
-};
+  return data.map(row => {
+    const formattedRow = { ...row };
 
-exports.formatDataForDownload = data => {
-  const formattedData = { ...data };
-  formattedData.data = formattedData.data.map(row => {
-    delete row.action;
-    return row;
+    formattedRow.state = formattedRow['State'];
+    delete formattedRow['State'];
+
+    formattedRow.inputSymbol = formattedRow['Input Symbol'];
+    delete formattedRow['Input Symbol'];
+
+    formattedRow.nextState = formattedRow['Next State'];
+    delete formattedRow['Next State'];
+
+    formattedRow.action = 'Delete';
+
+    return formattedRow;
   });
-  return formattedData;
 };
