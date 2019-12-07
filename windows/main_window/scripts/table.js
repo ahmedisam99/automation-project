@@ -18,6 +18,7 @@ var table = new Tabulator(transitionTable, {
   responsiveLayout: 'hide',
   addRowPos: 'bottom',
   headerSort: false,
+  resizableColumns: false,
   placeholder: tablePlaceholder,
   columns: [
     {
