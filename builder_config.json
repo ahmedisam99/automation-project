@@ -1,7 +1,7 @@
 {
   "linux": {
     "target": "deb",
-    "icon": "assets/icon.png",
+    "icon": "/assets/icon.png",
     "maintainer": "Ahmed I. Abdellatif"
   },
   "win": {
@@ -11,6 +11,6 @@
         "arch": ["x64", "ia32"]
       }
     ],
-    "icon": "assets/icon.png"
+    "icon": "/assets/icon.png"
   }
 }
