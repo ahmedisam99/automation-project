@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev electron . --icon=assets/icon.png",
-    "dist-linux": "electron-builder --linux --config config.json",
-    "dist-win": "electron-builder --win --config config.json"
+    "dist-linux": "electron-builder --linux --config builder_config.json",
+    "dist-win": "electron-builder --win --config builder_config.json"
   },
   "author": "Ahmed I. Abdellatif",
   "license": "MIT",
