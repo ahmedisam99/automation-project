@@ -8,7 +8,7 @@ const createMainWindow = () => {
     minWidth: 720,
     minHeight: 550,
     webPreferences: { nodeIntegration: true },
-    icon: path.join(__dirname, '..', '..', 'assets', 'icon.png'),
+    icon: path.join(__dirname, '..', '..', 'assets', 'icons', '512x512.png'),
   });
   window.loadURL(
     url.format({

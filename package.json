@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev electron . --icon=assets/icon.png",
-    "dist-linux": "electron-builder --linux --config builder_config.json",
-    "dist-win": "electron-builder --win --config builder_config.json"
+    "dist-linux": "electron-builder --linux",
+    "dist-win": "electron-builder --win"
   },
-  "author": "Ahmed I. Abdellatif",
+  "author": {
+    "name": "Ahmed I. Abdellatif",
+    "email": "ahmedisam9922@gmail.com",
+    "url": "https://github.com/ahmedisam99"
+  },
   "license": "MIT",
   "dependencies": {
     "tabulator-tables": "^4.5.1",
@@ -19,5 +23,31 @@
     "electron-builder": "^21.2.0",
     "electron-installer-debian": "^2.0.1",
     "electron-packager": "^14.1.1"
+  },
+  "build": {
+    "appId": "com.ahmedisam99.app",
+    "productName": "Automation project",
+    "copyright": "Copyright © 2019 ${author}",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "./assets/icons/512x512.png",
+      "executableName": "AutomationProject",
+      "category": "Utility"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "./assets/icons/512x512.png"
+    }
   }
 }
