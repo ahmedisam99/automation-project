@@ -1,0 +1,16 @@
+{
+  "linux": {
+    "target": "deb",
+    "icon": "assets/icon.png",
+    "maintainer": "Ahmed I. Abdellatif"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64", "ia32"]
+      }
+    ],
+    "icon": "assets/icon.png"
+  }
+}

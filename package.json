@@ -4,7 +4,9 @@
   "description": "automation project (Dr. Nassir)",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=dev electron . --icon=assets/icon.png"
+    "start": "NODE_ENV=dev electron . --icon=assets/icon.png",
+    "dist-linux": "electron-builder --linux --config config.json",
+    "dist-win": "electron-builder --win --config config.json"
   },
   "author": "Ahmed I. Abdellatif",
   "license": "MIT",
@@ -14,6 +16,7 @@
   },
   "devDependencies": {
     "electron": "^6.1.5",
+    "electron-builder": "^21.2.0",
     "electron-installer-debian": "^2.0.1",
     "electron-packager": "^14.1.1"
   }
