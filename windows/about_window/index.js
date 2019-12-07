@@ -7,6 +7,7 @@ const createAboutWindow = () => {
     width: 400,
     height: 200,
     resizable: false,
+    icon: path.join(__dirname, '..', '..', 'assets', 'icon.png'),
   });
 
   aboutWindow.loadURL(
