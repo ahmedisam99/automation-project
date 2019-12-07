@@ -38,7 +38,8 @@ body {
   border-radius: 3px;
 }
 
-.tabulator-cell.delete {
+.tabulator-cell.danger,
+.form > .danger {
   color: red;
 }
 

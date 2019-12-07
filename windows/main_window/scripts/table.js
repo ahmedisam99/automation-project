@@ -13,7 +13,7 @@ const tablePlaceholder = `
   <img src="../../assets/no_data.png" class="no-data-img"/>
 </div>`;
 
-const table = new Tabulator(transitionTable, {
+var table = new Tabulator(transitionTable, {
   layout: 'fitColumns',
   responsiveLayout: 'hide',
   addRowPos: 'bottom',
@@ -41,7 +41,7 @@ const table = new Tabulator(transitionTable, {
       cellClick: (_, cell) => {
         cell._cell.row.delete();
       },
-      cssClass: 'delete',
+      cssClass: 'danger',
       download: false,
     },
   ],
