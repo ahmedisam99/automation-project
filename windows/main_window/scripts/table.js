@@ -1,5 +1,5 @@
+const { ipcRenderer } = require('electron');
 const Tabulator = require('tabulator-tables');
-const tableData = require('./scripts/table_dummy_data.json');
 const { formatDataForTable } = require('./scripts/utils.js');
 
 const newBtn = document.querySelector('#newBtn');
@@ -47,7 +47,7 @@ const table = new Tabulator(transitionTable, {
   ],
 });
 
-newBtn.addEventListener('click', () => {
+const addNewRow = () => {
   table
     .addRow({
       state: '--',
@@ -59,13 +59,13 @@ newBtn.addEventListener('click', () => {
       alert('An error occured while adding a new row');
     });
   transitionTable.scrollTop = transitionTable.scrollHeight;
-});
+};
 
-saveBtn.addEventListener('click', () => {
+const saveData = () => {
   table.download('xlsx', 'dfa.xlsx', { sheetName: 'automation-project' });
-});
+};
 
-loadBtn.addEventListener('click', () => {
+const loadData = () => {
   const fileInput = document.createElement('input');
   fileInput.type = 'file';
   fileInput.accept = '.xlsx';
@@ -92,4 +92,12 @@ loadBtn.addEventListener('click', () => {
   });
 
   fileInput.click();
-});
+};
+
+newBtn.addEventListener('click', addNewRow);
+saveBtn.addEventListener('click', saveData);
+loadBtn.addEventListener('click', loadData);
+
+ipcRenderer.on('new', addNewRow);
+ipcRenderer.on('save', saveData);
+ipcRenderer.on('load', loadData);

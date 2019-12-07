@@ -1,4 +1,4 @@
-const { app, Menu, shell } = require('electron');
+const { app, Menu, shell, ipcMain } = require('electron');
 const createAboutWindow = require('../windows/about_window');
 
 const menuBarTemplate = [
@@ -8,14 +8,23 @@ const menuBarTemplate = [
       {
         label: 'New',
         accelerator: 'Ctrl+N',
+        click(_, window) {
+          window.webContents.send('new');
+        },
       },
       {
         label: 'Save',
         accelerator: 'Ctrl+S',
+        click(_, window) {
+          window.webContents.send('save');
+        },
       },
       {
         label: 'Load',
         accelerator: 'Ctrl+L',
+        click(_, window) {
+          window.webContents.send('load');
+        },
       },
       {
         label: 'Quit',
