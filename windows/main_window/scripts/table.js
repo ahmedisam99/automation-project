@@ -3,6 +3,7 @@ const tableData = require('./scripts/table_dummy_data.json');
 const { formatDataForTable } = require('./scripts/utils.js');
 
 const newBtn = document.querySelector('#newBtn');
+const saveBtn = document.querySelector('#saveBtn');
 const transitionTable = document.querySelector('#transitionTable');
 
 const table = new Tabulator(transitionTable, {
@@ -10,7 +11,7 @@ const table = new Tabulator(transitionTable, {
   layout: 'fitColumns',
   responsiveLayout: 'hide',
   addRowPos: 'bottom',
-  history: true,
+  headerSort: false,
   columns: [
     {
       title: 'State',
@@ -34,6 +35,7 @@ const table = new Tabulator(transitionTable, {
         cell._cell.row.delete();
       },
       cssClass: 'delete',
+      download: false,
     },
   ],
 });
@@ -50,4 +52,9 @@ newBtn.addEventListener('click', () => {
       alert('An error occured while adding a new row');
     });
   transitionTable.scrollTop = transitionTable.scrollHeight;
+});
+
+saveBtn.addEventListener('click', () => {
+  //   window.XLSX = xlsx;
+  table.download('xlsx', 'dfa.xlsx', { sheetName: 'automation-project' });
 });

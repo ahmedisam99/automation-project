@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "electron": "^6.1.5",
-    "tabulator-tables": "^4.5.1"
+    "tabulator-tables": "^4.5.1",
+    "xlsx": "^0.15.3"
   }
 }
