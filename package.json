@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "tabulator-tables": "^4.5.1",
-    "xlsx": "^0.15.3"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "electron": "^11.5.0",
